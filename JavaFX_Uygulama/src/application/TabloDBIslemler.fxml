@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TabloDBIslemlerController">
+   <children>
+      <SplitPane dividerPositions="0.3855421686746988" layoutX="130.0" layoutY="82.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tableview_islemler" layoutX="28.0" onMouseClicked="#tableview_islemler_Click" prefHeight="182.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="col_id" prefWidth="46.0" text="kIDM" />
+                      <TableColumn fx:id="col_sahip" prefWidth="150.0" text="Araç Sahip" />
+                        <TableColumn fx:id="col_plaka" prefWidth="105.0" text="Arac Plaka" />
+                        <TableColumn fx:id="col_tur" prefWidth="85.0" text="Araç Tür" />
+                        <TableColumn fx:id="col_yikamaTur" prefWidth="127.0" text="Yikama Tür" />
+                        <TableColumn fx:id="col_fiyat" prefWidth="82.0" text="Fiyat" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: Turquoise;">
+               <children>
+                  <Label layoutX="25.0" layoutY="21.0" text="kIDM:">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="26.0" layoutY="53.0" text="Araç Sahip:">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="27.0" layoutY="81.0" text="Araç Plaka:">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="27.0" layoutY="108.0" text="Araç Tür:">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="25.0" layoutY="136.0" text="Yikama Tür:">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="27.0" layoutY="162.0" text="Fiyat:">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="lbl_id" layoutX="107.0" layoutY="21.0" />
+                  <TextField fx:id="txt_sahip" layoutX="107.0" layoutY="49.0" />
+                  <TextField fx:id="txt_plaka" layoutX="107.0" layoutY="77.0" />
+                  <TextField fx:id="txt_tur" layoutX="107.0" layoutY="104.0" />
+                  <TextField fx:id="txt_yikamaTur" layoutX="107.0" layoutY="132.0" />
+                  <TextField fx:id="txt_fiyat" layoutX="107.0" layoutY="158.0" />
+                  <Button fx:id="btn_refresh" layoutX="106.0" layoutY="209.0" mnemonicParsing="false" onAction="#btn_refresh_Click" prefHeight="51.0" prefWidth="159.0" style="-fx-background-color: Violet;" text="REFRESH" textFill="#000000fc">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="btn_ekle" layoutX="423.0" layoutY="26.0" mnemonicParsing="false" onAction="#btn_ekle_Click" prefHeight="51.0" prefWidth="126.0" style="-fx-background-color: Orange;" text="Ekleme" textFill="#000000fd">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="btn_sil" layoutX="423.0" layoutY="86.0" mnemonicParsing="false" onAction="#btn_sil_Click" prefHeight="51.0" prefWidth="126.0" style="-fx-background-color: Brown;" text="Silme" textFill="#000000fb">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="btn_guncelle" layoutX="423.0" layoutY="145.0" mnemonicParsing="false" onAction="#btn_guncelle_Click" prefHeight="51.0" prefWidth="126.0" style="-fx-background-color: Silver;" text="Güncelleme" textFill="#000000fc">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="btn_temizle" layoutX="275.0" layoutY="28.0" mnemonicParsing="false" onAction="#btn_temizle_Click" prefHeight="51.0" prefWidth="126.0" style="-fx-background-color: purple;" text="Temizle" textFill="#000000fc">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

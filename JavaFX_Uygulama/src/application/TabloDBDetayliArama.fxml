@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TabloDBDetayliAramaController">
+   <children>
+      <SplitPane dividerPositions="0.5175879396984925" layoutX="114.0" layoutY="123.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="232.0" prefWidth="598.0" style="-fx-background-color: brown;">
+               <children>
+                  <TextField fx:id="txt_arama" onAction="#txt_aramaAction" onKeyPressed="#txt_arama_KeyPressed" prefHeight="39.0" prefWidth="351.0" promptText="Aranılacak araç sahibi adını giriniz">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_plaka" layoutX="1.0" layoutY="78.0" onAction="#txt_plaka_Action" onKeyPressed="#txt_plaka_KeyPressed" prefHeight="39.0" prefWidth="357.0" promptText="Aranılacak plaka numarasını giriniz">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_tur" layoutX="1.0" layoutY="159.0" onAction="#txt_tur_Action" onKeyPressed="#txt_tur_KeyPressed" prefHeight="39.0" prefWidth="351.0" promptText="Aranılacak araç türünü giriniz">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_yikama" layoutX="247.0" layoutY="39.0" onAction="#txt_yikama_Action" onKeyPressed="#txt_yikama_KeyPressed" prefHeight="39.0" prefWidth="351.0" promptText="Aranılacak araç yıkama türünü giriniz">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fiyat" layoutX="248.0" layoutY="117.0" onAction="#txt_fiyat_Action" onKeyPressed="#txt_fiyat_KeyPressed" prefHeight="39.0" prefWidth="351.0" promptText="Aranılacak araç fiyatını giriniz">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tableview_Aramalar" layoutX="53.0" layoutY="27.0" onMouseClicked="#tableview_Aramalar_MouseClick" prefHeight="160.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="col_id" prefWidth="48.0" text="kIDM" />
+                      <TableColumn fx:id="col_sahip" prefWidth="176.0" text="Araç Sahip" />
+                        <TableColumn fx:id="col_plaka" prefWidth="94.0" text="Araç Plaka" />
+                        <TableColumn fx:id="col_tur" prefWidth="111.0" text="Araç Tür" />
+                        <TableColumn fx:id="col_yikama" prefWidth="104.0" text="Yıkama Tür" />
+                        <TableColumn fx:id="col_fiyat" prefWidth="62.0" text="Fiyat" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
